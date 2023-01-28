@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class statusBubble extends StatelessWidget {
-  const statusBubble({super.key});
+  ImageProvider imageUrl;
+  String name;
+  statusBubble({required this.name, required this.imageUrl, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,20 +12,22 @@ class statusBubble extends StatelessWidget {
         right: 20,
       ),
       child: Column(
-        children: const [
-          SizedBox(
+        children: [
+          const SizedBox(
             height: 10,
           ),
           CircleAvatar(
             backgroundColor: Colors.white,
             radius: 25,
+            backgroundImage: imageUrl,
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(
-            'Tinashe',
-            style: TextStyle(fontWeight: FontWeight.w600, color: Colors.white),
+            name,
+            style: const TextStyle(
+                fontWeight: FontWeight.w600, color: Colors.white),
           ),
         ],
       ),
