@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                               statusBubble(
                                 imageUrl: const AssetImage(
                                     'assets/images/profile-1.jpg'),
-                                name: 'Tinashe',
+                                name: 'Zihle',
                               ),
                               statusBubble(
                                 imageUrl: const AssetImage(
