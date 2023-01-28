@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: const HomePage(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
+      theme: ThemeData(primarySwatch: Colors.indigo, fontFamily: 'Gotham'),
     );
   }
 }
