@@ -10,8 +10,16 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-              child: Container(
-            color: Colors.indigo,
+              child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              color: Colors.indigo,
+              child: SafeArea(
+                child: Column(
+                  children: const [],
+                ),
+              ),
+            ),
           )),
           Expanded(
               flex: 2,
