@@ -1,3 +1,4 @@
+import 'package:chat_app/utils/chatBubble.dart';
 import 'package:chat_app/utils/statusBubble.dart';
 import 'package:chat_app/utils/topBar.dart';
 import 'package:flutter/material.dart';
@@ -38,15 +39,42 @@ class HomePage extends StatelessWidget {
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
-                            children: const [
-                              statusBubble(),
-                              statusBubble(),
-                              statusBubble(),
-                              statusBubble(),
-                              statusBubble(),
-                              statusBubble(),
-                              statusBubble(),
-                              statusBubble(),
+                            children: [
+                              statusBubble(
+                                imageUrl: const AssetImage(
+                                    'assets/images/profile-5.jpg'),
+                                name: 'Tinashe',
+                              ),
+                              statusBubble(
+                                imageUrl: const AssetImage(
+                                    'assets/images/profile-1.jpg'),
+                                name: 'Tinashe',
+                              ),
+                              statusBubble(
+                                imageUrl: const AssetImage(
+                                    'assets/images/profile-3.jpg'),
+                                name: 'Roy',
+                              ),
+                              statusBubble(
+                                imageUrl: const AssetImage(
+                                    'assets/images/profile-2.jpg'),
+                                name: 'Adil',
+                              ),
+                              statusBubble(
+                                imageUrl: const AssetImage(
+                                    'assets/images/profile-4.jpg'),
+                                name: 'Nashe',
+                              ),
+                              statusBubble(
+                                imageUrl: const AssetImage(
+                                    'assets/images/profile-2.jpg'),
+                                name: 'Adil',
+                              ),
+                              statusBubble(
+                                imageUrl: const AssetImage(
+                                    'assets/images/profile-4.jpg'),
+                                name: 'Nashe',
+                              ),
                             ],
                           ),
                         )
@@ -63,10 +91,46 @@ class HomePage extends StatelessWidget {
                     topRight: Radius.circular(30)),
                 child: Container(
                   color: Colors.white,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        chatBubble(
+                          imageUrl:
+                              const AssetImage('assets/images/profile-1.jpg'),
+                          name: 'Tinashe Mahwenda',
+                        ),
+                        chatBubble(
+                          imageUrl:
+                              const AssetImage('assets/images/profile-2.jpg'),
+                          name: 'Roy Nyahunzvi',
+                        ),
+                        chatBubble(
+                          imageUrl:
+                              const AssetImage('assets/images/profile-3.jpg'),
+                          name: 'Inshan Apple',
+                        ),
+                        chatBubble(
+                          imageUrl:
+                              const AssetImage('assets/images/profile-4.jpg'),
+                          name: 'Tinashe New',
+                        ),
+                        chatBubble(
+                          imageUrl:
+                              const AssetImage('assets/images/profile-5.jpg'),
+                          name: 'Tinashe',
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               )),
         ],
       ),
+      floatingActionButton:
+          FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
     );
   }
 }
